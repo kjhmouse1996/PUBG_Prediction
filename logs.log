@@ -25,3 +25,761 @@
 2022-06-05 20:15:22,865:INFO:pycaret_globals: {'transform_target_param', 'logging_param', 'fold_param', '_gpu_n_jobs_param', 'experiment__', '_all_metrics', 'html_param', 'iterative_imputation_iters_param', 'n_jobs_param', '_all_models', 'stratify_param', 'data_before_preprocess', 'fix_imbalance_param', 'fold_groups_param', 'prep_pipe', 'fold_shuffle_param', 'y', 'y_test', 'exp_name_log', 'display_container', 'imputation_classifier', 'gpu_param', '_available_plots', 'X', 'USI', 'fix_imbalance_method_param', 'X_train', '_all_models_internal', 'fold_generator', 'pycaret_globals', 'target_param', 'fold_groups_param_full', 'X_test', 'transform_target_method_param', 'create_model_container', '_ml_usecase', 'y_train', 'seed', '_internal_pipeline', 'imputation_regressor', 'log_plots_param', 'master_model_container'}
 2022-06-05 20:15:22,865:INFO:Preparing display monitor
 2022-06-05 20:15:22,865:INFO:Preparing display monitor
+2022-06-05 20:15:22,884:INFO:Importing libraries
+2022-06-05 20:15:22,884:INFO:Copying data for preprocessing
+2022-06-05 20:15:22,944:INFO:Declaring preprocessing parameters
+2022-06-05 20:15:23,144:INFO:Creating preprocessing pipeline
+2022-06-05 20:15:23,328:INFO:Preprocessing pipeline created successfully
+2022-06-05 20:15:23,328:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2022-06-05 20:15:23,328:INFO:Creating global containers
+2022-06-05 20:15:23,330:INFO:Internal pipeline: Pipeline(memory=None, steps=[('empty_step', 'passthrough')], verbose=False)
+2022-06-05 20:15:36,157:INFO:Creating grid variables
+2022-06-05 20:15:36,478:INFO:create_model_container: 0
+2022-06-05 20:15:36,478:INFO:master_model_container: 0
+2022-06-05 20:15:36,478:INFO:display_container: 1
+2022-06-05 20:15:36,485:INFO:Pipeline(memory=None,
+         steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=[],
+                                      display_types=True, features_todrop=[],
+                                      id_columns=[], ml_usecase='regression',
+                                      numerical_features=[],
+                                      target='winPlacePerc',
+                                      time_features=[])),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_str...
+                ('scaling', 'passthrough'), ('P_transform', 'passthrough'),
+                ('binn', 'passthrough'), ('rem_outliers', 'passthrough'),
+                ('cluster_all', 'passthrough'),
+                ('dummy', Dummify(target='winPlacePerc')),
+                ('fix_perfect', Remove_100(target='winPlacePerc')),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough')],
+         verbose=False)
+2022-06-05 20:15:36,485:INFO:setup() succesfully completed......................................
+2022-06-05 20:15:47,592:INFO:Initializing compare_models()
+2022-06-05 20:15:47,592:INFO:compare_models(include=None, fold=5, round=4, cross_validation=True, sort=MAE, n_select=10, budget_time=None, turbo=True, errors=ignore, fit_kwargs=None, groups=None, probability_threshold=None, verbose=True, display=None, exclude=None)
+2022-06-05 20:15:47,592:INFO:Checking exceptions
+2022-06-05 20:15:47,592:INFO:Preparing display monitor
+2022-06-05 20:15:47,593:INFO:Preparing display monitor
+2022-06-05 20:15:47,622:INFO:Initializing Linear Regression
+2022-06-05 20:15:47,623:INFO:Total runtime is 1.6629695892333984e-05 minutes
+2022-06-05 20:15:47,635:INFO:SubProcess create_model() called ==================================
+2022-06-05 20:15:47,636:INFO:Initializing create_model()
+2022-06-05 20:15:47,636:INFO:create_model(estimator=lr, fold=KFold(n_splits=5, random_state=2967, shuffle=True), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x0000015ECBC67F10>, kwargs={})
+2022-06-05 20:15:47,636:INFO:Checking exceptions
+2022-06-05 20:15:47,637:INFO:Importing libraries
+2022-06-05 20:15:47,637:INFO:Copying training dataset
+2022-06-05 20:15:47,663:INFO:Defining folds
+2022-06-05 20:15:47,663:INFO:Declaring metric variables
+2022-06-05 20:15:47,675:INFO:Importing untrained model
+2022-06-05 20:15:47,683:INFO:Linear Regression Imported succesfully
+2022-06-05 20:15:47,706:INFO:Starting cross validation
+2022-06-05 20:15:47,715:INFO:Cross validating with KFold(n_splits=5, random_state=2967, shuffle=True), n_jobs=-1
+2022-06-05 20:16:00,172:INFO:Calculating mean and std
+2022-06-05 20:16:00,173:INFO:Creating metrics dataframe
+2022-06-05 20:16:00,178:INFO:Uploading results into container
+2022-06-05 20:16:00,178:INFO:Uploading model into container now
+2022-06-05 20:16:00,178:INFO:create_model_container: 1
+2022-06-05 20:16:00,178:INFO:master_model_container: 1
+2022-06-05 20:16:00,178:INFO:display_container: 2
+2022-06-05 20:16:00,179:INFO:LinearRegression(copy_X=True, fit_intercept=True, n_jobs=-1, normalize=False)
+2022-06-05 20:16:00,179:INFO:create_model() succesfully completed......................................
+2022-06-05 20:16:00,287:INFO:SubProcess create_model() end ==================================
+2022-06-05 20:16:00,288:INFO:Creating metrics dataframe
+2022-06-05 20:16:00,304:INFO:Initializing Lasso Regression
+2022-06-05 20:16:00,304:INFO:Total runtime is 0.21137637694676717 minutes
+2022-06-05 20:16:00,317:INFO:SubProcess create_model() called ==================================
+2022-06-05 20:16:00,318:INFO:Initializing create_model()
+2022-06-05 20:16:00,318:INFO:create_model(estimator=lasso, fold=KFold(n_splits=5, random_state=2967, shuffle=True), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x0000015ECBC67F10>, kwargs={})
+2022-06-05 20:16:00,318:INFO:Checking exceptions
+2022-06-05 20:16:00,319:INFO:Importing libraries
+2022-06-05 20:16:00,319:INFO:Copying training dataset
+2022-06-05 20:16:00,354:INFO:Defining folds
+2022-06-05 20:16:00,354:INFO:Declaring metric variables
+2022-06-05 20:16:00,368:INFO:Importing untrained model
+2022-06-05 20:16:00,381:INFO:Lasso Regression Imported succesfully
+2022-06-05 20:16:00,402:INFO:Starting cross validation
+2022-06-05 20:16:00,402:INFO:Cross validating with KFold(n_splits=5, random_state=2967, shuffle=True), n_jobs=-1
+2022-06-05 20:16:06,780:INFO:Calculating mean and std
+2022-06-05 20:16:06,781:INFO:Creating metrics dataframe
+2022-06-05 20:16:06,785:INFO:Uploading results into container
+2022-06-05 20:16:06,785:INFO:Uploading model into container now
+2022-06-05 20:16:06,785:INFO:create_model_container: 2
+2022-06-05 20:16:06,785:INFO:master_model_container: 2
+2022-06-05 20:16:06,785:INFO:display_container: 2
+2022-06-05 20:16:06,785:INFO:Lasso(alpha=1.0, copy_X=True, fit_intercept=True, max_iter=1000,
+      normalize=False, positive=False, precompute=False, random_state=2967,
+      selection='cyclic', tol=0.0001, warm_start=False)
+2022-06-05 20:16:06,785:INFO:create_model() succesfully completed......................................
+2022-06-05 20:16:06,855:INFO:SubProcess create_model() end ==================================
+2022-06-05 20:16:06,856:INFO:Creating metrics dataframe
+2022-06-05 20:16:06,875:INFO:Initializing Ridge Regression
+2022-06-05 20:16:06,875:INFO:Total runtime is 0.32088900009791055 minutes
+2022-06-05 20:16:06,885:INFO:SubProcess create_model() called ==================================
+2022-06-05 20:16:06,886:INFO:Initializing create_model()
+2022-06-05 20:16:06,887:INFO:create_model(estimator=ridge, fold=KFold(n_splits=5, random_state=2967, shuffle=True), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x0000015ECBC67F10>, kwargs={})
+2022-06-05 20:16:06,887:INFO:Checking exceptions
+2022-06-05 20:16:06,887:INFO:Importing libraries
+2022-06-05 20:16:06,887:INFO:Copying training dataset
+2022-06-05 20:16:06,914:INFO:Defining folds
+2022-06-05 20:16:06,915:INFO:Declaring metric variables
+2022-06-05 20:16:06,925:INFO:Importing untrained model
+2022-06-05 20:16:06,934:INFO:Ridge Regression Imported succesfully
+2022-06-05 20:16:06,962:INFO:Starting cross validation
+2022-06-05 20:16:06,963:INFO:Cross validating with KFold(n_splits=5, random_state=2967, shuffle=True), n_jobs=-1
+2022-06-05 20:16:10,497:INFO:Calculating mean and std
+2022-06-05 20:16:10,498:INFO:Creating metrics dataframe
+2022-06-05 20:16:10,501:INFO:Uploading results into container
+2022-06-05 20:16:10,501:INFO:Uploading model into container now
+2022-06-05 20:16:10,501:INFO:create_model_container: 3
+2022-06-05 20:16:10,501:INFO:master_model_container: 3
+2022-06-05 20:16:10,501:INFO:display_container: 2
+2022-06-05 20:16:10,502:INFO:Ridge(alpha=1.0, copy_X=True, fit_intercept=True, max_iter=None,
+      normalize=False, random_state=2967, solver='auto', tol=0.001)
+2022-06-05 20:16:10,502:INFO:create_model() succesfully completed......................................
+2022-06-05 20:16:10,573:INFO:SubProcess create_model() end ==================================
+2022-06-05 20:16:10,573:INFO:Creating metrics dataframe
+2022-06-05 20:16:10,592:INFO:Initializing Elastic Net
+2022-06-05 20:16:10,593:INFO:Total runtime is 0.3828581611315409 minutes
+2022-06-05 20:16:10,602:INFO:SubProcess create_model() called ==================================
+2022-06-05 20:16:10,603:INFO:Initializing create_model()
+2022-06-05 20:16:10,603:INFO:create_model(estimator=en, fold=KFold(n_splits=5, random_state=2967, shuffle=True), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x0000015ECBC67F10>, kwargs={})
+2022-06-05 20:16:10,604:INFO:Checking exceptions
+2022-06-05 20:16:10,604:INFO:Importing libraries
+2022-06-05 20:16:10,604:INFO:Copying training dataset
+2022-06-05 20:16:10,631:INFO:Defining folds
+2022-06-05 20:16:10,632:INFO:Declaring metric variables
+2022-06-05 20:16:10,644:INFO:Importing untrained model
+2022-06-05 20:16:10,655:INFO:Elastic Net Imported succesfully
+2022-06-05 20:16:10,682:INFO:Starting cross validation
+2022-06-05 20:16:10,682:INFO:Cross validating with KFold(n_splits=5, random_state=2967, shuffle=True), n_jobs=-1
+2022-06-05 20:16:16,329:INFO:Calculating mean and std
+2022-06-05 20:16:16,330:INFO:Creating metrics dataframe
+2022-06-05 20:16:16,333:INFO:Uploading results into container
+2022-06-05 20:16:16,334:INFO:Uploading model into container now
+2022-06-05 20:16:16,334:INFO:create_model_container: 4
+2022-06-05 20:16:16,334:INFO:master_model_container: 4
+2022-06-05 20:16:16,334:INFO:display_container: 2
+2022-06-05 20:16:16,335:INFO:ElasticNet(alpha=1.0, copy_X=True, fit_intercept=True, l1_ratio=0.5,
+           max_iter=1000, normalize=False, positive=False, precompute=False,
+           random_state=2967, selection='cyclic', tol=0.0001, warm_start=False)
+2022-06-05 20:16:16,335:INFO:create_model() succesfully completed......................................
+2022-06-05 20:16:16,408:INFO:SubProcess create_model() end ==================================
+2022-06-05 20:16:16,408:INFO:Creating metrics dataframe
+2022-06-05 20:16:16,427:INFO:Initializing Least Angle Regression
+2022-06-05 20:16:16,427:INFO:Total runtime is 0.4800781726837158 minutes
+2022-06-05 20:16:16,442:INFO:SubProcess create_model() called ==================================
+2022-06-05 20:16:16,443:INFO:Initializing create_model()
+2022-06-05 20:16:16,444:INFO:create_model(estimator=lar, fold=KFold(n_splits=5, random_state=2967, shuffle=True), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x0000015ECBC67F10>, kwargs={})
+2022-06-05 20:16:16,444:INFO:Checking exceptions
+2022-06-05 20:16:16,444:INFO:Importing libraries
+2022-06-05 20:16:16,444:INFO:Copying training dataset
+2022-06-05 20:16:16,476:INFO:Defining folds
+2022-06-05 20:16:16,476:INFO:Declaring metric variables
+2022-06-05 20:16:16,484:INFO:Importing untrained model
+2022-06-05 20:16:16,496:INFO:Least Angle Regression Imported succesfully
+2022-06-05 20:16:16,518:INFO:Starting cross validation
+2022-06-05 20:16:16,519:INFO:Cross validating with KFold(n_splits=5, random_state=2967, shuffle=True), n_jobs=-1
+2022-06-05 20:16:20,483:INFO:Calculating mean and std
+2022-06-05 20:16:20,484:INFO:Creating metrics dataframe
+2022-06-05 20:16:20,489:INFO:Uploading results into container
+2022-06-05 20:16:20,490:INFO:Uploading model into container now
+2022-06-05 20:16:20,490:INFO:create_model_container: 5
+2022-06-05 20:16:20,490:INFO:master_model_container: 5
+2022-06-05 20:16:20,490:INFO:display_container: 2
+2022-06-05 20:16:20,491:INFO:Lars(copy_X=True, eps=2.220446049250313e-16, fit_intercept=True, fit_path=True,
+     jitter=None, n_nonzero_coefs=500, normalize=True, precompute='auto',
+     random_state=2967, verbose=False)
+2022-06-05 20:16:20,491:INFO:create_model() succesfully completed......................................
+2022-06-05 20:16:20,563:INFO:SubProcess create_model() end ==================================
+2022-06-05 20:16:20,563:INFO:Creating metrics dataframe
+2022-06-05 20:16:20,582:INFO:Initializing Lasso Least Angle Regression
+2022-06-05 20:16:20,582:INFO:Total runtime is 0.5493371168772379 minutes
+2022-06-05 20:16:20,596:INFO:SubProcess create_model() called ==================================
+2022-06-05 20:16:20,597:INFO:Initializing create_model()
+2022-06-05 20:16:20,597:INFO:create_model(estimator=llar, fold=KFold(n_splits=5, random_state=2967, shuffle=True), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x0000015ECBC67F10>, kwargs={})
+2022-06-05 20:16:20,597:INFO:Checking exceptions
+2022-06-05 20:16:20,597:INFO:Importing libraries
+2022-06-05 20:16:20,597:INFO:Copying training dataset
+2022-06-05 20:16:20,623:INFO:Defining folds
+2022-06-05 20:16:20,624:INFO:Declaring metric variables
+2022-06-05 20:16:20,631:INFO:Importing untrained model
+2022-06-05 20:16:20,643:INFO:Lasso Least Angle Regression Imported succesfully
+2022-06-05 20:16:20,664:INFO:Starting cross validation
+2022-06-05 20:16:20,665:INFO:Cross validating with KFold(n_splits=5, random_state=2967, shuffle=True), n_jobs=-1
+2022-06-05 20:16:24,772:INFO:Calculating mean and std
+2022-06-05 20:16:24,773:INFO:Creating metrics dataframe
+2022-06-05 20:16:24,777:INFO:Uploading results into container
+2022-06-05 20:16:24,777:INFO:Uploading model into container now
+2022-06-05 20:16:24,777:INFO:create_model_container: 6
+2022-06-05 20:16:24,777:INFO:master_model_container: 6
+2022-06-05 20:16:24,778:INFO:display_container: 2
+2022-06-05 20:16:24,778:INFO:LassoLars(alpha=1.0, copy_X=True, eps=2.220446049250313e-16, fit_intercept=True,
+          fit_path=True, jitter=None, max_iter=500, normalize=True,
+          positive=False, precompute='auto', random_state=2967, verbose=False)
+2022-06-05 20:16:24,778:INFO:create_model() succesfully completed......................................
+2022-06-05 20:16:24,851:INFO:SubProcess create_model() end ==================================
+2022-06-05 20:16:24,851:INFO:Creating metrics dataframe
+2022-06-05 20:16:24,873:INFO:Initializing Orthogonal Matching Pursuit
+2022-06-05 20:16:24,873:INFO:Total runtime is 0.6208456556002298 minutes
+2022-06-05 20:16:24,900:INFO:SubProcess create_model() called ==================================
+2022-06-05 20:16:24,900:INFO:Initializing create_model()
+2022-06-05 20:16:24,901:INFO:create_model(estimator=omp, fold=KFold(n_splits=5, random_state=2967, shuffle=True), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x0000015ECBC67F10>, kwargs={})
+2022-06-05 20:16:24,901:INFO:Checking exceptions
+2022-06-05 20:16:24,901:INFO:Importing libraries
+2022-06-05 20:16:24,901:INFO:Copying training dataset
+2022-06-05 20:16:24,929:INFO:Defining folds
+2022-06-05 20:16:24,930:INFO:Declaring metric variables
+2022-06-05 20:16:24,943:INFO:Importing untrained model
+2022-06-05 20:16:24,958:INFO:Orthogonal Matching Pursuit Imported succesfully
+2022-06-05 20:16:24,979:INFO:Starting cross validation
+2022-06-05 20:16:24,980:INFO:Cross validating with KFold(n_splits=5, random_state=2967, shuffle=True), n_jobs=-1
+2022-06-05 20:16:29,014:INFO:Calculating mean and std
+2022-06-05 20:16:29,015:INFO:Creating metrics dataframe
+2022-06-05 20:16:29,018:INFO:Uploading results into container
+2022-06-05 20:16:29,019:INFO:Uploading model into container now
+2022-06-05 20:16:29,019:INFO:create_model_container: 7
+2022-06-05 20:16:29,019:INFO:master_model_container: 7
+2022-06-05 20:16:29,019:INFO:display_container: 2
+2022-06-05 20:16:29,020:INFO:OrthogonalMatchingPursuit(fit_intercept=True, n_nonzero_coefs=None,
+                          normalize=True, precompute='auto', tol=None)
+2022-06-05 20:16:29,020:INFO:create_model() succesfully completed......................................
+2022-06-05 20:16:29,096:INFO:SubProcess create_model() end ==================================
+2022-06-05 20:16:29,096:INFO:Creating metrics dataframe
+2022-06-05 20:16:29,118:INFO:Initializing Bayesian Ridge
+2022-06-05 20:16:29,118:INFO:Total runtime is 0.6915986339251199 minutes
+2022-06-05 20:16:29,133:INFO:SubProcess create_model() called ==================================
+2022-06-05 20:16:29,134:INFO:Initializing create_model()
+2022-06-05 20:16:29,135:INFO:create_model(estimator=br, fold=KFold(n_splits=5, random_state=2967, shuffle=True), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x0000015ECBC67F10>, kwargs={})
+2022-06-05 20:16:29,135:INFO:Checking exceptions
+2022-06-05 20:16:29,135:INFO:Importing libraries
+2022-06-05 20:16:29,135:INFO:Copying training dataset
+2022-06-05 20:16:29,163:INFO:Defining folds
+2022-06-05 20:16:29,163:INFO:Declaring metric variables
+2022-06-05 20:16:29,174:INFO:Importing untrained model
+2022-06-05 20:16:29,184:INFO:Bayesian Ridge Imported succesfully
+2022-06-05 20:16:29,217:INFO:Starting cross validation
+2022-06-05 20:16:29,218:INFO:Cross validating with KFold(n_splits=5, random_state=2967, shuffle=True), n_jobs=-1
+2022-06-05 20:16:44,572:INFO:Calculating mean and std
+2022-06-05 20:16:44,573:INFO:Creating metrics dataframe
+2022-06-05 20:16:44,576:INFO:Uploading results into container
+2022-06-05 20:16:44,577:INFO:Uploading model into container now
+2022-06-05 20:16:44,577:INFO:create_model_container: 8
+2022-06-05 20:16:44,577:INFO:master_model_container: 8
+2022-06-05 20:16:44,577:INFO:display_container: 2
+2022-06-05 20:16:44,578:INFO:BayesianRidge(alpha_1=1e-06, alpha_2=1e-06, alpha_init=None,
+              compute_score=False, copy_X=True, fit_intercept=True,
+              lambda_1=1e-06, lambda_2=1e-06, lambda_init=None, n_iter=300,
+              normalize=False, tol=0.001, verbose=False)
+2022-06-05 20:16:44,578:INFO:create_model() succesfully completed......................................
+2022-06-05 20:16:44,650:INFO:SubProcess create_model() end ==================================
+2022-06-05 20:16:44,650:INFO:Creating metrics dataframe
+2022-06-05 20:16:44,672:INFO:Initializing Passive Aggressive Regressor
+2022-06-05 20:16:44,673:INFO:Total runtime is 0.9508490363756814 minutes
+2022-06-05 20:16:44,683:INFO:SubProcess create_model() called ==================================
+2022-06-05 20:16:44,683:INFO:Initializing create_model()
+2022-06-05 20:16:44,684:INFO:create_model(estimator=par, fold=KFold(n_splits=5, random_state=2967, shuffle=True), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x0000015ECBC67F10>, kwargs={})
+2022-06-05 20:16:44,684:INFO:Checking exceptions
+2022-06-05 20:16:44,684:INFO:Importing libraries
+2022-06-05 20:16:44,684:INFO:Copying training dataset
+2022-06-05 20:16:44,717:INFO:Defining folds
+2022-06-05 20:16:44,717:INFO:Declaring metric variables
+2022-06-05 20:16:44,729:INFO:Importing untrained model
+2022-06-05 20:16:44,741:INFO:Passive Aggressive Regressor Imported succesfully
+2022-06-05 20:16:44,764:INFO:Starting cross validation
+2022-06-05 20:16:44,765:INFO:Cross validating with KFold(n_splits=5, random_state=2967, shuffle=True), n_jobs=-1
+2022-06-05 20:17:14,905:INFO:Calculating mean and std
+2022-06-05 20:17:14,905:INFO:Creating metrics dataframe
+2022-06-05 20:17:14,911:INFO:Uploading results into container
+2022-06-05 20:17:14,912:INFO:Uploading model into container now
+2022-06-05 20:17:14,912:INFO:create_model_container: 9
+2022-06-05 20:17:14,912:INFO:master_model_container: 9
+2022-06-05 20:17:14,912:INFO:display_container: 2
+2022-06-05 20:17:14,913:INFO:PassiveAggressiveRegressor(C=1.0, average=False, early_stopping=False,
+                           epsilon=0.1, fit_intercept=True,
+                           loss='epsilon_insensitive', max_iter=1000,
+                           n_iter_no_change=5, random_state=2967, shuffle=True,
+                           tol=0.001, validation_fraction=0.1, verbose=0,
+                           warm_start=False)
+2022-06-05 20:17:14,913:INFO:create_model() succesfully completed......................................
+2022-06-05 20:17:14,985:INFO:SubProcess create_model() end ==================================
+2022-06-05 20:17:14,985:INFO:Creating metrics dataframe
+2022-06-05 20:17:15,008:INFO:Initializing Huber Regressor
+2022-06-05 20:17:15,009:INFO:Total runtime is 1.4564465363820394 minutes
+2022-06-05 20:17:15,022:INFO:SubProcess create_model() called ==================================
+2022-06-05 20:17:15,022:INFO:Initializing create_model()
+2022-06-05 20:17:15,022:INFO:create_model(estimator=huber, fold=KFold(n_splits=5, random_state=2967, shuffle=True), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x0000015ECBC67F10>, kwargs={})
+2022-06-05 20:17:15,023:INFO:Checking exceptions
+2022-06-05 20:17:15,023:INFO:Importing libraries
+2022-06-05 20:17:15,023:INFO:Copying training dataset
+2022-06-05 20:17:15,051:INFO:Defining folds
+2022-06-05 20:17:15,051:INFO:Declaring metric variables
+2022-06-05 20:17:15,060:INFO:Importing untrained model
+2022-06-05 20:17:15,072:INFO:Huber Regressor Imported succesfully
+2022-06-05 20:17:15,096:INFO:Starting cross validation
+2022-06-05 20:17:15,097:INFO:Cross validating with KFold(n_splits=5, random_state=2967, shuffle=True), n_jobs=-1
+2022-06-05 20:21:15,928:INFO:Calculating mean and std
+2022-06-05 20:21:15,930:INFO:Creating metrics dataframe
+2022-06-05 20:21:15,937:INFO:Uploading results into container
+2022-06-05 20:21:15,937:INFO:Uploading model into container now
+2022-06-05 20:21:15,937:INFO:create_model_container: 10
+2022-06-05 20:21:15,937:INFO:master_model_container: 10
+2022-06-05 20:21:15,937:INFO:display_container: 2
+2022-06-05 20:21:15,938:INFO:HuberRegressor(alpha=0.0001, epsilon=1.35, fit_intercept=True, max_iter=100,
+               tol=1e-05, warm_start=False)
+2022-06-05 20:21:15,938:INFO:create_model() succesfully completed......................................
+2022-06-05 20:21:16,015:INFO:SubProcess create_model() end ==================================
+2022-06-05 20:21:16,015:INFO:Creating metrics dataframe
+2022-06-05 20:21:16,039:INFO:Initializing K Neighbors Regressor
+2022-06-05 20:21:16,039:INFO:Total runtime is 5.473622361818949 minutes
+2022-06-05 20:21:16,049:INFO:SubProcess create_model() called ==================================
+2022-06-05 20:21:16,051:INFO:Initializing create_model()
+2022-06-05 20:21:16,051:INFO:create_model(estimator=knn, fold=KFold(n_splits=5, random_state=2967, shuffle=True), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x0000015ECBC67F10>, kwargs={})
+2022-06-05 20:21:16,051:INFO:Checking exceptions
+2022-06-05 20:21:16,051:INFO:Importing libraries
+2022-06-05 20:21:16,051:INFO:Copying training dataset
+2022-06-05 20:21:16,087:INFO:Defining folds
+2022-06-05 20:21:16,087:INFO:Declaring metric variables
+2022-06-05 20:21:16,095:INFO:Importing untrained model
+2022-06-05 20:21:16,106:INFO:K Neighbors Regressor Imported succesfully
+2022-06-05 20:21:16,125:INFO:Starting cross validation
+2022-06-05 20:21:16,126:INFO:Cross validating with KFold(n_splits=5, random_state=2967, shuffle=True), n_jobs=-1
+2022-06-05 21:14:01,796:WARNING:create_model() for knn raised an exception or returned all 0.0, trying without fit_kwargs:
+2022-06-05 21:14:01,843:WARNING:Traceback (most recent call last):
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 2206, in compare_models
+    model, model_fit_time = create_model_supervised(**create_model_args)
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 3171, in create_model_supervised
+    scores = cross_validate(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 1056, in __call__
+    self.retrieve()
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 935, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "C:\Users\Seo\anaconda3\lib\concurrent\futures\_base.py", line 434, in result
+    self._condition.wait(timeout)
+  File "C:\Users\Seo\anaconda3\lib\threading.py", line 302, in wait
+    waiter.acquire()
+KeyboardInterrupt
+
+2022-06-05 21:14:01,844:INFO:Initializing create_model()
+2022-06-05 21:14:01,844:INFO:create_model(estimator=knn, fold=KFold(n_splits=5, random_state=2967, shuffle=True), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x0000015ECBC67F10>, kwargs={})
+2022-06-05 21:14:01,844:INFO:Checking exceptions
+2022-06-05 21:14:01,844:INFO:Importing libraries
+2022-06-05 21:14:01,845:INFO:Copying training dataset
+2022-06-05 21:14:01,885:INFO:Defining folds
+2022-06-05 21:14:01,885:INFO:Declaring metric variables
+2022-06-05 21:14:01,899:INFO:Importing untrained model
+2022-06-05 21:14:01,911:INFO:K Neighbors Regressor Imported succesfully
+2022-06-05 21:14:01,932:INFO:Starting cross validation
+2022-06-05 21:14:01,933:INFO:Cross validating with KFold(n_splits=5, random_state=2967, shuffle=True), n_jobs=-1
+2022-06-05 21:14:01,934:ERROR:create_model() for knn raised an exception or returned all 0.0:
+2022-06-05 21:14:01,938:ERROR:Traceback (most recent call last):
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 2206, in compare_models
+    model, model_fit_time = create_model_supervised(**create_model_args)
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 3171, in create_model_supervised
+    scores = cross_validate(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 1056, in __call__
+    self.retrieve()
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 935, in retrieve
+    self._output.extend(job.get(timeout=self.timeout))
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 542, in wrap_future_result
+    return future.result(timeout=timeout)
+  File "C:\Users\Seo\anaconda3\lib\concurrent\futures\_base.py", line 434, in result
+    self._condition.wait(timeout)
+  File "C:\Users\Seo\anaconda3\lib\threading.py", line 302, in wait
+    waiter.acquire()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 2215, in compare_models
+    model, model_fit_time = create_model_supervised(**create_model_args)
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 3171, in create_model_supervised
+    scores = cross_validate(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 968, in __call__
+    n_jobs = self._initialize_backend()
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 735, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 494, in configure
+    self._workers = get_memmapping_executor(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\executor.py", line 20, in get_memmapping_executor
+    return MemmappingExecutor.get_memmapping_executor(n_jobs, **kwargs)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\executor.py", line 42, in get_memmapping_executor
+    manager = TemporaryResourcesManager(temp_folder)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 531, in __init__
+    self.set_current_context(context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 535, in set_current_context
+    self.register_new_context(context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 560, in register_new_context
+    self.register_folder_finalizer(new_folder_path, context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 590, in register_folder_finalizer
+    resource_tracker.register(pool_subfolder, "folder")
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 190, in register
+    self.ensure_running()
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 102, in ensure_running
+    if self._check_alive():
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 182, in _check_alive
+    self._send('PROBE', '', '')
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 209, in _send
+    nbytes = os.write(self._fd, msg)
+OSError: [Errno 22] Invalid argument
+
+2022-06-05 21:14:01,948:INFO:Initializing Decision Tree Regressor
+2022-06-05 21:14:01,948:INFO:Total runtime is 58.238765160242714 minutes
+2022-06-05 21:14:01,960:INFO:SubProcess create_model() called ==================================
+2022-06-05 21:14:01,960:INFO:Initializing create_model()
+2022-06-05 21:14:01,960:INFO:create_model(estimator=dt, fold=KFold(n_splits=5, random_state=2967, shuffle=True), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x0000015ECBC67F10>, kwargs={})
+2022-06-05 21:14:01,960:INFO:Checking exceptions
+2022-06-05 21:14:01,961:INFO:Importing libraries
+2022-06-05 21:14:01,962:INFO:Copying training dataset
+2022-06-05 21:14:01,996:INFO:Defining folds
+2022-06-05 21:14:01,996:INFO:Declaring metric variables
+2022-06-05 21:14:02,004:INFO:Importing untrained model
+2022-06-05 21:14:02,015:INFO:Decision Tree Regressor Imported succesfully
+2022-06-05 21:14:02,036:INFO:Starting cross validation
+2022-06-05 21:14:02,036:INFO:Cross validating with KFold(n_splits=5, random_state=2967, shuffle=True), n_jobs=-1
+2022-06-05 21:14:02,037:WARNING:create_model() for dt raised an exception or returned all 0.0, trying without fit_kwargs:
+2022-06-05 21:14:02,038:WARNING:Traceback (most recent call last):
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 2206, in compare_models
+    model, model_fit_time = create_model_supervised(**create_model_args)
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 3171, in create_model_supervised
+    scores = cross_validate(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 968, in __call__
+    n_jobs = self._initialize_backend()
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 735, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 494, in configure
+    self._workers = get_memmapping_executor(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\executor.py", line 20, in get_memmapping_executor
+    return MemmappingExecutor.get_memmapping_executor(n_jobs, **kwargs)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\executor.py", line 42, in get_memmapping_executor
+    manager = TemporaryResourcesManager(temp_folder)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 531, in __init__
+    self.set_current_context(context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 535, in set_current_context
+    self.register_new_context(context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 560, in register_new_context
+    self.register_folder_finalizer(new_folder_path, context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 590, in register_folder_finalizer
+    resource_tracker.register(pool_subfolder, "folder")
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 190, in register
+    self.ensure_running()
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 102, in ensure_running
+    if self._check_alive():
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 182, in _check_alive
+    self._send('PROBE', '', '')
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 209, in _send
+    nbytes = os.write(self._fd, msg)
+OSError: [Errno 22] Invalid argument
+
+2022-06-05 21:14:02,038:INFO:Initializing create_model()
+2022-06-05 21:14:02,040:INFO:create_model(estimator=dt, fold=KFold(n_splits=5, random_state=2967, shuffle=True), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x0000015ECBC67F10>, kwargs={})
+2022-06-05 21:14:02,040:INFO:Checking exceptions
+2022-06-05 21:14:02,040:INFO:Importing libraries
+2022-06-05 21:14:02,040:INFO:Copying training dataset
+2022-06-05 21:14:02,077:INFO:Defining folds
+2022-06-05 21:14:02,077:INFO:Declaring metric variables
+2022-06-05 21:14:02,087:INFO:Importing untrained model
+2022-06-05 21:14:02,098:INFO:Decision Tree Regressor Imported succesfully
+2022-06-05 21:14:02,118:INFO:Starting cross validation
+2022-06-05 21:14:02,119:INFO:Cross validating with KFold(n_splits=5, random_state=2967, shuffle=True), n_jobs=-1
+2022-06-05 21:14:02,121:ERROR:create_model() for dt raised an exception or returned all 0.0:
+2022-06-05 21:14:02,128:ERROR:Traceback (most recent call last):
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 2206, in compare_models
+    model, model_fit_time = create_model_supervised(**create_model_args)
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 3171, in create_model_supervised
+    scores = cross_validate(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 968, in __call__
+    n_jobs = self._initialize_backend()
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 735, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 494, in configure
+    self._workers = get_memmapping_executor(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\executor.py", line 20, in get_memmapping_executor
+    return MemmappingExecutor.get_memmapping_executor(n_jobs, **kwargs)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\executor.py", line 42, in get_memmapping_executor
+    manager = TemporaryResourcesManager(temp_folder)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 531, in __init__
+    self.set_current_context(context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 535, in set_current_context
+    self.register_new_context(context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 560, in register_new_context
+    self.register_folder_finalizer(new_folder_path, context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 590, in register_folder_finalizer
+    resource_tracker.register(pool_subfolder, "folder")
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 190, in register
+    self.ensure_running()
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 102, in ensure_running
+    if self._check_alive():
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 182, in _check_alive
+    self._send('PROBE', '', '')
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 209, in _send
+    nbytes = os.write(self._fd, msg)
+OSError: [Errno 22] Invalid argument
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 2215, in compare_models
+    model, model_fit_time = create_model_supervised(**create_model_args)
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 3171, in create_model_supervised
+    scores = cross_validate(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 968, in __call__
+    n_jobs = self._initialize_backend()
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 735, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 494, in configure
+    self._workers = get_memmapping_executor(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\executor.py", line 20, in get_memmapping_executor
+    return MemmappingExecutor.get_memmapping_executor(n_jobs, **kwargs)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\executor.py", line 42, in get_memmapping_executor
+    manager = TemporaryResourcesManager(temp_folder)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 531, in __init__
+    self.set_current_context(context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 535, in set_current_context
+    self.register_new_context(context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 560, in register_new_context
+    self.register_folder_finalizer(new_folder_path, context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 590, in register_folder_finalizer
+    resource_tracker.register(pool_subfolder, "folder")
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 190, in register
+    self.ensure_running()
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 102, in ensure_running
+    if self._check_alive():
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 182, in _check_alive
+    self._send('PROBE', '', '')
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 209, in _send
+    nbytes = os.write(self._fd, msg)
+OSError: [Errno 22] Invalid argument
+
+2022-06-05 21:14:02,138:INFO:Initializing Random Forest Regressor
+2022-06-05 21:14:02,138:INFO:Total runtime is 58.24193005561828 minutes
+2022-06-05 21:14:02,153:INFO:SubProcess create_model() called ==================================
+2022-06-05 21:14:02,153:INFO:Initializing create_model()
+2022-06-05 21:14:02,153:INFO:create_model(estimator=rf, fold=KFold(n_splits=5, random_state=2967, shuffle=True), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x0000015ECBC67F10>, kwargs={})
+2022-06-05 21:14:02,153:INFO:Checking exceptions
+2022-06-05 21:14:02,153:INFO:Importing libraries
+2022-06-05 21:14:02,153:INFO:Copying training dataset
+2022-06-05 21:14:02,188:INFO:Defining folds
+2022-06-05 21:14:02,188:INFO:Declaring metric variables
+2022-06-05 21:14:02,198:INFO:Importing untrained model
+2022-06-05 21:14:02,212:INFO:Random Forest Regressor Imported succesfully
+2022-06-05 21:14:02,233:INFO:Starting cross validation
+2022-06-05 21:14:02,234:INFO:Cross validating with KFold(n_splits=5, random_state=2967, shuffle=True), n_jobs=-1
+2022-06-05 21:14:02,235:WARNING:create_model() for rf raised an exception or returned all 0.0, trying without fit_kwargs:
+2022-06-05 21:14:02,236:WARNING:Traceback (most recent call last):
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 2206, in compare_models
+    model, model_fit_time = create_model_supervised(**create_model_args)
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 3171, in create_model_supervised
+    scores = cross_validate(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 968, in __call__
+    n_jobs = self._initialize_backend()
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 735, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 494, in configure
+    self._workers = get_memmapping_executor(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\executor.py", line 20, in get_memmapping_executor
+    return MemmappingExecutor.get_memmapping_executor(n_jobs, **kwargs)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\executor.py", line 42, in get_memmapping_executor
+    manager = TemporaryResourcesManager(temp_folder)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 531, in __init__
+    self.set_current_context(context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 535, in set_current_context
+    self.register_new_context(context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 560, in register_new_context
+    self.register_folder_finalizer(new_folder_path, context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 590, in register_folder_finalizer
+    resource_tracker.register(pool_subfolder, "folder")
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 190, in register
+    self.ensure_running()
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 102, in ensure_running
+    if self._check_alive():
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 182, in _check_alive
+    self._send('PROBE', '', '')
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 209, in _send
+    nbytes = os.write(self._fd, msg)
+OSError: [Errno 22] Invalid argument
+
+2022-06-05 21:14:02,236:INFO:Initializing create_model()
+2022-06-05 21:14:02,236:INFO:create_model(estimator=rf, fold=KFold(n_splits=5, random_state=2967, shuffle=True), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x0000015ECBC67F10>, kwargs={})
+2022-06-05 21:14:02,236:INFO:Checking exceptions
+2022-06-05 21:14:02,236:INFO:Importing libraries
+2022-06-05 21:14:02,236:INFO:Copying training dataset
+2022-06-05 21:14:02,268:INFO:Defining folds
+2022-06-05 21:14:02,268:INFO:Declaring metric variables
+2022-06-05 21:14:02,279:INFO:Importing untrained model
+2022-06-05 21:14:02,288:INFO:Random Forest Regressor Imported succesfully
+2022-06-05 21:14:02,314:INFO:Starting cross validation
+2022-06-05 21:14:02,315:INFO:Cross validating with KFold(n_splits=5, random_state=2967, shuffle=True), n_jobs=-1
+2022-06-05 21:14:02,316:ERROR:create_model() for rf raised an exception or returned all 0.0:
+2022-06-05 21:14:02,317:ERROR:Traceback (most recent call last):
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 2206, in compare_models
+    model, model_fit_time = create_model_supervised(**create_model_args)
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 3171, in create_model_supervised
+    scores = cross_validate(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 968, in __call__
+    n_jobs = self._initialize_backend()
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 735, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 494, in configure
+    self._workers = get_memmapping_executor(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\executor.py", line 20, in get_memmapping_executor
+    return MemmappingExecutor.get_memmapping_executor(n_jobs, **kwargs)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\executor.py", line 42, in get_memmapping_executor
+    manager = TemporaryResourcesManager(temp_folder)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 531, in __init__
+    self.set_current_context(context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 535, in set_current_context
+    self.register_new_context(context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 560, in register_new_context
+    self.register_folder_finalizer(new_folder_path, context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 590, in register_folder_finalizer
+    resource_tracker.register(pool_subfolder, "folder")
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 190, in register
+    self.ensure_running()
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 102, in ensure_running
+    if self._check_alive():
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 182, in _check_alive
+    self._send('PROBE', '', '')
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 209, in _send
+    nbytes = os.write(self._fd, msg)
+OSError: [Errno 22] Invalid argument
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 2215, in compare_models
+    model, model_fit_time = create_model_supervised(**create_model_args)
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 3171, in create_model_supervised
+    scores = cross_validate(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 968, in __call__
+    n_jobs = self._initialize_backend()
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 735, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 494, in configure
+    self._workers = get_memmapping_executor(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\executor.py", line 20, in get_memmapping_executor
+    return MemmappingExecutor.get_memmapping_executor(n_jobs, **kwargs)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\executor.py", line 42, in get_memmapping_executor
+    manager = TemporaryResourcesManager(temp_folder)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 531, in __init__
+    self.set_current_context(context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 535, in set_current_context
+    self.register_new_context(context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 560, in register_new_context
+    self.register_folder_finalizer(new_folder_path, context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 590, in register_folder_finalizer
+    resource_tracker.register(pool_subfolder, "folder")
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 190, in register
+    self.ensure_running()
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 102, in ensure_running
+    if self._check_alive():
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 182, in _check_alive
+    self._send('PROBE', '', '')
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 209, in _send
+    nbytes = os.write(self._fd, msg)
+OSError: [Errno 22] Invalid argument
+
+2022-06-05 21:14:02,327:INFO:Initializing Extra Trees Regressor
+2022-06-05 21:14:02,327:INFO:Total runtime is 58.245079004764555 minutes
+2022-06-05 21:14:02,337:INFO:SubProcess create_model() called ==================================
+2022-06-05 21:14:02,337:INFO:Initializing create_model()
+2022-06-05 21:14:02,337:INFO:create_model(estimator=et, fold=KFold(n_splits=5, random_state=2967, shuffle=True), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x0000015ECBC67F10>, kwargs={})
+2022-06-05 21:14:02,337:INFO:Checking exceptions
+2022-06-05 21:14:02,338:INFO:Importing libraries
+2022-06-05 21:14:02,338:INFO:Copying training dataset
+2022-06-05 21:14:02,365:INFO:Defining folds
+2022-06-05 21:14:02,365:INFO:Declaring metric variables
+2022-06-05 21:14:02,379:INFO:Importing untrained model
+2022-06-05 21:14:02,389:INFO:Extra Trees Regressor Imported succesfully
+2022-06-05 21:14:02,413:INFO:Starting cross validation
+2022-06-05 21:14:02,413:INFO:Cross validating with KFold(n_splits=5, random_state=2967, shuffle=True), n_jobs=-1
+2022-06-05 21:14:02,414:WARNING:create_model() for et raised an exception or returned all 0.0, trying without fit_kwargs:
+2022-06-05 21:14:02,415:WARNING:Traceback (most recent call last):
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 2206, in compare_models
+    model, model_fit_time = create_model_supervised(**create_model_args)
+  File "C:\Users\Seo\AppData\Roaming\Python\Python38\site-packages\pycaret\internal\tabular.py", line 3171, in create_model_supervised
+    scores = cross_validate(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\utils\validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\sklearn\model_selection\_validation.py", line 242, in cross_validate
+    scores = parallel(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 968, in __call__
+    n_jobs = self._initialize_backend()
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\parallel.py", line 735, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_parallel_backends.py", line 494, in configure
+    self._workers = get_memmapping_executor(
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\executor.py", line 20, in get_memmapping_executor
+    return MemmappingExecutor.get_memmapping_executor(n_jobs, **kwargs)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\executor.py", line 42, in get_memmapping_executor
+    manager = TemporaryResourcesManager(temp_folder)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 531, in __init__
+    self.set_current_context(context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 535, in set_current_context
+    self.register_new_context(context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 560, in register_new_context
+    self.register_folder_finalizer(new_folder_path, context_id)
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\_memmapping_reducer.py", line 590, in register_folder_finalizer
+    resource_tracker.register(pool_subfolder, "folder")
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 190, in register
+    self.ensure_running()
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 102, in ensure_running
+    if self._check_alive():
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 182, in _check_alive
+    self._send('PROBE', '', '')
+  File "C:\Users\Seo\anaconda3\lib\site-packages\joblib\externals\loky\backend\resource_tracker.py", line 209, in _send
+    nbytes = os.write(self._fd, msg)
+OSError: [Errno 22] Invalid argument
+
+2022-06-05 21:14:02,416:INFO:Initializing create_model()
+2022-06-05 21:14:02,416:INFO:create_model(estimator=et, fold=KFold(n_splits=5, random_state=2967, shuffle=True), round=4, cross_validation=True, predict=True, fit_kwargs={}, groups=None, refit=False, verbose=False, system=False, metrics=None, add_to_model_list=True, probability_threshold=None, display=<pycaret.internal.Display.Display object at 0x0000015ECBC67F10>, kwargs={})
+2022-06-05 21:14:02,416:INFO:Checking exceptions
+2022-06-05 21:14:02,416:INFO:Importing libraries
+2022-06-05 21:14:02,416:INFO:Copying training dataset
+2022-06-05 21:14:02,445:INFO:Defining folds
+2022-06-05 21:14:02,445:INFO:Declaring metric variables
+2022-06-05 21:14:02,454:INFO:Importing untrained model
+2022-06-05 21:14:02,466:INFO:Extra Trees Regressor Imported succesfully
